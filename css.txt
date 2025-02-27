@@ -5,10 +5,12 @@
   font-family: "Poppins", sans-serif;
   list-style: none;
 }
+
 body {
   background: #f9f9f9;
-  color: #363434;
+  color: #333;
 }
+
 nav {
   width: 100%;
   padding: 20px 50px;
@@ -21,11 +23,10 @@ nav {
 
 }
 
-
 label.logo {
   font-size: 22px;
   font-weight: bold;
-  color: #2e0a4b;
+  color: #6a0dad;
 }
 
 nav ul {
@@ -33,8 +34,9 @@ nav ul {
   display: flex;
   padding: 10px;
   float: right;
-  margin-right: 10px;
+  margin-right: 20px;
 }
+
 nav ul li {
   margin: 0 5px;
   display: inline-block;
@@ -42,6 +44,7 @@ nav ul li {
 
 
 }
+
 nav ul li a {
   text-decoration: none;
   color: #22004e;
@@ -50,10 +53,7 @@ nav ul li a {
   text-transform: uppercase;
 
 }
-nav ul li a:hover {
-  color: #d1c521;
-  transition: 0.3s;
-}
+
 .hero {
   display: flex;
   align-items: center;
@@ -65,10 +65,16 @@ nav ul li a:hover {
 .hero-content {
   max-width: 50%;
 }
+
 .hero-content h1 {
   font-size: 40px;
   font-weight: bold;
 }
+
+.highlight {
+  color: #6a0dad;
+}
+
 .hero-content p {
   font-size: 19px;
   color: #555;
@@ -76,28 +82,26 @@ nav ul li a:hover {
   max-width: 500px;
 }
 
-.highlight {
-  color: #6a0dad;
-}
-
 .social-icons {
   margin: 10px 0;
 }
 
 .social-icons a {
-  margin: 0 5px;
-  color: #22004e;
-  font-size: 20px;
   text-decoration: none;
+  color: #333;
+  font-size: 15px;
   margin-right: 10px;
   transition: 0.3s;
 }
+
 .social-icons a:hover {
   color: #6a0dad;
 }
+
 .buttons {
-  margin-top: 10px;
+  margin-top: 20px;
 }
+
 .btn {
   padding: 12px 20px;
   text-decoration: none;
@@ -107,92 +111,124 @@ nav ul li a:hover {
   display: inline-block;
   margin-right: 10px;
 }
+
 .primary {
   background: #6a0dad;
   color: white;
 }
+
 .primary:hover {
   background: #5500a3;
 }
+
 .secondary {
   background: black;
   color: white;
-  margin-top: 10px;
 }
+
 .secondary:hover {
   background: #333;
 }
-.dev-image img {
-  max-width: 300px;
-  width: 300px;
-  align-items: right;
-  align-content: right;
-  height: auto;
-  animation: fadeIn 1.5s ease-in-out;
+
+.hero-image img {
+  max-width: 400px;
+  width: 200px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 20px;
-  margin-top: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
 }
+
 .about-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1000px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .image img {
-  width: 300px;
-  animation: fadeIn 1.5s ease-in-out;
+    width: 300px;
+    animation: fadeIn 1.5s ease-in-out;
 }
+
 .text {
-  flex: 1;
-  padding-left: 20px;
+    flex: 1;
+    padding-left: 20px;
 }
+
 h2 {
-  font-size: 28px;
-  color: #333;
+    font-size: 28px;
+    color: #333;
 }
+
 .tech-stack i {
-  font-size: 40px;
-  margin-right: 10px;
-  color: #555;
-  transition: transform 0.3s ease-in-out;
+    font-size: 40px;
+    margin-right: 10px;
+    color: #555;
+    transition: transform 0.3s ease-in-out;
 }
+
 .tech-stack i:hover {
-  transform: scale(1.2);
-  color: #007bff;
+    transform: scale(1.2);
+    color: #007bff;
 }
+
 ul {
-  margin-top: 15px;
-  list-style: none;
+    margin-top: 15px;
+    list-style: none;
 }
+
 ul li {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #666;
 }
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .about-content {
-      flex-direction: column;
-      text-align: center;
-  }
-  .image img {
-      width: 250px;
-  }
-  .text {
-      padding-left: 0;
-      padding-top: 20px;
-  }
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .image img {
+        width: 250px;
+    }
+    .text {
+        padding-left: 0;
+        padding-top: 20px;
+    }
 }
+          
