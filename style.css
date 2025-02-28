@@ -5,10 +5,13 @@
   font-family: "Poppins", sans-serif;
   list-style: none;
 }
+
 body {
   background: #f9f9f9;
   color: #363434;
 }
+
+/* Navigation Bar */
 nav {
   width: 100%;
   padding: 20px 50px;
@@ -17,10 +20,7 @@ nav {
   align-items: center;
   background: rgb(200, 233, 231);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-   
-
 }
-
 
 label.logo {
   font-size: 22px;
@@ -29,31 +29,35 @@ label.logo {
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  padding: 10px;
-  float: right;
-  margin-right: 10px;
+  align-items: center;
 }
+
 nav ul li {
-  margin: 0 5px;
-  display: inline-block;
-  line-height: 30px;
-
-
+  margin: 0 10px;
 }
+
 nav ul li a {
   text-decoration: none;
   color: #22004e;
   font-weight: 600;
   font-size: 13px;
   text-transform: uppercase;
-
 }
+
 nav ul li a:hover {
   color: #d1c521;
   transition: 0.3s;
 }
+
+/* Hamburger Menu for Mobile */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
@@ -65,10 +69,12 @@ nav ul li a:hover {
 .hero-content {
   max-width: 50%;
 }
+
 .hero-content h1 {
   font-size: 40px;
   font-weight: bold;
 }
+
 .hero-content p {
   font-size: 19px;
   color: #555;
@@ -89,15 +95,17 @@ nav ul li a:hover {
   color: #22004e;
   font-size: 20px;
   text-decoration: none;
-  margin-right: 10px;
   transition: 0.3s;
 }
+
 .social-icons a:hover {
   color: #6a0dad;
 }
+
 .buttons {
   margin-top: 10px;
 }
+
 .btn {
   padding: 12px 20px;
   text-decoration: none;
@@ -106,38 +114,47 @@ nav ul li a:hover {
   border-radius: 5px;
   display: inline-block;
   margin-right: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
 .primary {
   background: #6a0dad;
   color: white;
 }
+
 .primary:hover {
   background: #5500a3;
 }
+
 .secondary {
   background: black;
   color: white;
-  margin-top: 10px;
 }
+
 .secondary:hover {
   background: #333;
 }
+
 .dev-image img {
   max-width: 300px;
-  width: 300px;
-  align-items: right;
-  align-content: right;
+  width: 100%;
   height: auto;
   animation: fadeIn 1.5s ease-in-out;
 }
+
+/* About Section */
 .about {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  padding: 20px;
-  margin-top: -100px;
+  padding: 50px 20px;
+  background: white;
 }
+
 .about-content {
   display: flex;
   flex-wrap: wrap;
@@ -148,51 +165,124 @@ nav ul li a:hover {
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .image img {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   animation: fadeIn 1.5s ease-in-out;
 }
+
 .text {
   flex: 1;
   padding-left: 20px;
 }
+
 h2 {
   font-size: 28px;
   color: #333;
 }
+
 .tech-stack i {
   font-size: 40px;
   margin-right: 10px;
   color: #555;
   transition: transform 0.3s ease-in-out;
 }
+
 .tech-stack i:hover {
   transform: scale(1.2);
   color: #007bff;
 }
+
 ul {
   margin-top: 15px;
-  list-style: none;
 }
+
 ul li {
   font-size: 16px;
   margin-bottom: 10px;
   color: #666;
 }
+
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+  /* Navigation Bar */
+  .menu-toggle {
+      display: block;
+  }
+
+  nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: rgb(200, 233, 231);
+      position: absolute;
+      top: 70px;
+      left: 0;
+      padding: 10px 0;
+  }
+
+  nav ul.active {
+      display: flex;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+      text-align: center;
+  }
+
+  /* Hero Section */
+  .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+  }
+
+  .hero-content {
+      max-width: 100%;
+  }
+
+  .dev-image img {
+      margin-top: 20px;
+  }
+
+  /* About Section */
   .about-content {
       flex-direction: column;
       text-align: center;
   }
+
   .image img {
       width: 250px;
+      margin-bottom: 20px;
   }
+
   .text {
       padding-left: 0;
-      padding-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+      padding: 20px;
+  }
+
+  .hero-content h1 {
+      font-size: 32px;
+  }
+
+  .hero-content p {
+      font-size: 16px;
+  }
+
+  .btn {
+      font-size: 14px;
+      padding: 10px 15px;
   }
 }

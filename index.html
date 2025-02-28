@@ -1,72 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sachin</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <label class="logo">Sachin</label>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact Me</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <label class="logo">Sachin</label>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
 
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Hi all, I'm <span class="highlight">Sachin Passi</span> 👋</h1>
-        <p>
-          A passionate Web Developer 🚀 skilled in HTML, CSS, JavaScript, and
-          React. Currently interning at CodSoft and creating interactive web
-          experiences.
-        </p>
-
-        <div class="social-icons">
-          <a href="https://github.com/sachinpassi881" target="_blank">
-            <i class="fab fa-github fa-lg"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/iamsachinpassi/" target="_blank">
-            <i class="fab fa-linkedin fa-lg"></i>
-          </a>
-          <a href="https://twitter.com/sachinpassi881" target="_blank">
-            <i class="fab fa-twitter fa-lg"></i>
-          </a>
-        </div>
-
-        <div class="buttons">
-          <a href="#" class="btn primary">Contact Me</a>
-          <a href="#" class="btn secondary">See My Resume</a>
-        </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hii i am  <span class="highlight">Sachin Passi</span></h1>
+      <p> A passionate Web Developer 🚀 skilled in HTML, CSS, JavaScript, and
+        React. Currently interning at CodSoft and creating interactive web
+        experiences.</p>
+      <div class="social-icons">
+        <a href="https://github.com/sachinpassi" target="_blank">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/iamsachinpassi/" target="_blank">
+          <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+        <a href="https://twitter.com/sachinpassi0" target="_blank">
+          <i class="fab fa-twitter fa-lg"></i>
+        </a>
       </div>
-      <div class="dev-image">
-        <img src="/Media/sachin resume image.png" alt="icon" />
+      <div class="buttons">
+        <a href="#" class="btn primary">Contact Me</a>
+        <a href="#" class="btn secondary">See My Resume</a>
       </div>
-    </section>
+    </div>
+    <div class="dev-image">
+      <img src="/Media/sachin resume image.png" alt="Developer Image">
+    </div>
+  </section>
 
-
-
-    
-    <section class="about">
-      <div class="about-content">
-          <div class="image">
-              <img src="/Media/dev_working.jpg" alt="Developer Working">
-          </div>
-          <div class="text">
-              <h2>What I Do</h2>
-              <p>CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK</p>
-              <div class="tech-stack">
-                  <i class="fab fa-html5"></i>
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-content">
+      <div class="image">
+        <img src="/Media/dev_working.jpg" alt="About Image">
+      </div>
+      <div class="text">
+        <h2>What I Do</h2>
+        <p>CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK</p>
+        <div class="tech-stack">
+          <i class="fab fa-html5" title="hTML5"></i>
                   <i class="fab fa-css3-alt"></i>
                   <i class="fab fa-js"></i>
                   <i class="fab fa-react"></i>
@@ -74,16 +68,25 @@
                   <i class="fab fa-aws"></i>
                   <i class="fab fa-python"></i>
                   <i class="fab fa-docker"></i>
-              </div>
-              <ul>
-                  <li>⚡ Develop highly interactive Frontend / User Interfaces</li>
-                  <li>⚡ Progressive Web Applications (PWA)</li>
-                  <li>⚡ Integration of third-party services (Firebase, AWS, Digital Ocean)</li>
-              </ul>
-          </div>
+         
+        </div>
+        <ul>
+          <li>⚡ Develop highly interactive Frontend / User Interfaces</li>
+          <li>⚡ Progressive Web Applications (PWA)</li>
+          <li>⚡ Integration of third-party services (Firebase, AWS, Digital Ocean)</li>
+        </ul>
       </div>
+    </div>
   </section>
 
-    
-  </body>
+  <!-- JavaScript for Menu Toggle -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navUl = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+      navUl.classList.toggle('active');
+    });
+  </script>
+</body>
 </html>
